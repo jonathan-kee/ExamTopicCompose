@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.example.myapplication.composable.AfterClickMe
 import com.example.myapplication.composable.ClickMe
 import com.example.myapplication.composable.ResponsiveLayout
+import com.example.myapplication.composable.StateRecomposition
 
 @Composable
 @Preview
@@ -29,6 +30,7 @@ fun App() {
                     // The modifier is optional and already has default
                     AfterClickMe("Jonathan", Modifier.padding(16.dp))
                     ResponsiveLayout()
+                    StateRecomposition("Test")
                 }
             }
         }

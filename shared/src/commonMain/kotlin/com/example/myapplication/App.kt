@@ -22,8 +22,6 @@ import myapplication.shared.generated.resources.compose_multiplatform
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {}
-
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
@@ -34,7 +32,7 @@ fun App() {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
+                Text("Click me! Testing")
             }
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }

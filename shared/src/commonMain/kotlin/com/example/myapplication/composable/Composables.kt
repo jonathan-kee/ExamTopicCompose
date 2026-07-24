@@ -9,12 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
-class Greeting {
-}
-
 @Composable
 fun ClickMe(name: String) {
-    Text(text = "This composable in inside Greeting.kt")
+    Text(text = "This composable in inside Composables.kt")
 }
 
 @Composable
@@ -27,16 +24,14 @@ fun AfterClickMe(name: String, modifier: Modifier = Modifier) {
     }
 }
 
+// Items has a default list if argument was not provided
 @Composable
-fun ResponsiveLayout() {
-    FlowRow {
-        Text(text = "Item 1")
-    }
-    FlowRow{
-        Text(text = "Item 2")
-    }
-    FlowRow{
-        Text(text = "Item 3")
+fun ResponsiveLayout(items: List<String> = listOf("Item 1", "Item 2", "Item 3", "Item 4")) {
+    // No need to keep track of index in Kotlin
+    for(i in items.indices){
+        FlowRow {
+            Text(text = items[i])
+        }
     }
 }
 

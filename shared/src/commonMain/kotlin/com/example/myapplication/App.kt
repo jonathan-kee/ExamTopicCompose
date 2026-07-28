@@ -18,15 +18,20 @@ import com.example.myapplication.theme.ui.QuickNotesAppTheme
 @Preview
 fun App() {
     QuickNotesAppTheme {
+        // Keep track of boolean state through recomposition
         var showContent by remember { mutableStateOf(false) }
+
         Column {
+            // OnClick will modify boolean state, this will trigger recomposition
             Button(onClick = { showContent = !showContent }) {
                 ClickMe("Testing")
             }
 
             GreetingText("Greeting", "Jon")
 
-            AnimatedVisibility(showContent) {
+            // visible is parameter that shows based on boolean
+            // recomposition will trigger this composable
+            AnimatedVisibility(visible = showContent) {
                 val greeting = remember { Greeting().greet() }
                 Column {
                     // The modifier is optional and already has default

@@ -41,6 +41,12 @@ In Kotlin:
 list.filter{ it % 2 == 0 }
 ```
 
+*** Kotlin offers a special syntax for passing functions as parameters to functions, when the last parameter is a function. ***
+
+^
+Used heavily in Jetpack Compose
+
+
 # Google official tutorial
 Composable introduction (Important):
 - https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables#2
@@ -49,6 +55,21 @@ Jetpack Compose includes a wide range of built-in annotations, you have already 
 
 Font size (Important)
 - https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables&utm_source=android-studio-app&utm_medium=app#5
+
+Arrange the text elements in a row and column (Important)
+- https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables&utm_source=android-studio-app&utm_medium=app#7
+
+The UI hierarchy is based on containment, meaning one component can contain one or more components, and the terms parent and child are sometimes used. The context here is that the parent UI elements contain children UI elements, which in turn can contain children UI elements. I
+
+The three basic, standard layout elements in Compose are Column, Row, and Box composables. You learn more about the Box composable in the next codelab.
+
+verticalArrangement, modifier, textAlign (Important)
+- https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables&utm_source=android-studio-app&utm_medium=app#8
+
+verticalArrangement = Arrangement.Center
+modifier = modifier.padding(8.dp)
+modifier = Modifier.padding(16.dp).align(alignment = Alignment.End)
+textAlign = TextAlign.Center
 
 Link (Important):
 - https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1

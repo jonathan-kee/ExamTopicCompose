@@ -15,12 +15,20 @@ import com.example.myapplication.composable.ResponsiveLayout
 import com.example.myapplication.composable.StateRecomposition
 import com.example.myapplication.theme.ui.QuickNotesAppTheme
 
+// QuickNotesAppTheme is a composable, the last parameter named "content" is a function
+// The type of "content" is @Composable() () -> Unit
+
+// Column is a composable, the last parameter is a function
+// The type of "content" is @Composable ColumnScope.() -> Unit
+
+// I think why they can contain child is because of the last parameter
+
 @Composable
 @Preview
 fun App() {
     QuickNotesAppTheme {
         var showContent by remember { mutableStateOf(false) }
-        Column() {
+        Column {
             Button(onClick = { showContent = !showContent }) {
                 ClickMe("Testing")
             }
@@ -29,7 +37,7 @@ fun App() {
 
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }
-                Column() {
+                Column {
                     // The modifier is optional and already has default
                     AfterClickMe("Jonathan", Modifier.padding(16.dp))
                     ResponsiveLayout()

@@ -12,11 +12,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
+@Preview(showBackground = true)
 @Composable
-fun ClickMe(name: String) {
-    Text(text = "This composable in inside Composables.kt")
+fun ClickMe(name: String = "Preview") {
+    Text(
+        text = "This composable in inside Composables.kt",
+        fontSize = 20.sp,
+        lineHeight = 25.sp
+    )
 }
 
 @Composable
@@ -30,6 +37,7 @@ fun AfterClickMe(name: String, modifier: Modifier = Modifier) {
 }
 
 // Items has a default list if argument was not provided
+@Preview(showBackground = true)
 @Composable
 fun ResponsiveLayout(items: List<String> = listOf("Item 1", "Item 2", "Item 3", "Item 4")) {
     // No need to keep track of index in Kotlin
@@ -40,6 +48,7 @@ fun ResponsiveLayout(items: List<String> = listOf("Item 1", "Item 2", "Item 3", 
     }
 }
 
+@Preview(showBackground = true)
 @Composable
 fun ModifierExample() {
     Text(

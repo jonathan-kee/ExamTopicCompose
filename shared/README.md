@@ -1,8 +1,11 @@
 # Resources to learn Kotlin UI
+Download theme free
+- https://material-foundation.github.io/material-theme-builder/
+
 Where the main class is located:
 shared/commonMain/kotlin/com/example/myapplication/App.kt
 
-Link:
+My first introduction Link:
 - https://kotlinlang.org/docs/multiplatform/compose-multiplatform-explore-composables.html#implementing-composable-functions
 
 The App() function is a regular Kotlin function annotated with @Composable. Such functions are referred to as composable functions or simply composables. They are the building blocks of a UI based on Jetpack Compose or Compose Multiplatform.
@@ -38,6 +41,7 @@ In Kotlin:
 list.filter{ it % 2 == 0 }
 ```
 
+# Google official tutorial
 Link (Important):
 - https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables#2
 

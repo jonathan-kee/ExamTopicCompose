@@ -14,15 +14,6 @@ import com.example.myapplication.composable.GreetingText
 import com.example.myapplication.composable.ResponsiveLayout
 import com.example.myapplication.composable.StateRecomposition
 import com.example.myapplication.theme.ui.QuickNotesAppTheme
-
-// QuickNotesAppTheme is a composable, the last parameter named "content" is a function
-// The type of "content" is @Composable() () -> Unit
-
-// Column is a composable, the last parameter is a function
-// The type of "content" is @Composable ColumnScope.() -> Unit
-
-// I think why they can contain child is because of the last parameter
-
 @Composable
 @Preview
 fun App() {

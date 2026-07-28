@@ -2,16 +2,17 @@
 Download theme free
 - https://material-foundation.github.io/material-theme-builder/
 
-Straight to the point video on jetpack compose
-https://www.youtube.com/@CodeWithFK/playlists
-
-Where the main class is located:
-shared/commonMain/kotlin/com/example/myapplication/App.kt
-
 My first introduction Link:
 - https://kotlinlang.org/docs/multiplatform/compose-multiplatform-explore-composables.html#implementing-composable-functions
 
 The App() function is a regular Kotlin function annotated with @Composable. Such functions are referred to as composable functions or simply composables. They are the building blocks of a UI based on Jetpack Compose or Compose Multiplatform.
+
+Straight to the point video on jetpack compose
+https://www.youtube.com/@CodeWithFK/playlists
+
+# My Notes
+Where the main class is located:
+shared/commonMain/kotlin/com/example/myapplication/App.kt
 
 (Gemini on Lambda syntax):
 
@@ -49,6 +50,17 @@ list.filter{ it % 2 == 0 }
 ^
 Used heavily in Jetpack Compose
 
+```kotlin
+QuickNotesAppTheme
+```
+ is a composable, the last parameter named "content" is a function. The type of "content" is @Composable() () -> Unit
+
+```kotlin
+Column
+```
+is a composable, the last parameter is a function. The type of "content" is @Composable ColumnScope.() -> Unit
+
+I think why they can contain child is because of the last parameter
 
 # Google official tutorial
 Composable introduction (Important):

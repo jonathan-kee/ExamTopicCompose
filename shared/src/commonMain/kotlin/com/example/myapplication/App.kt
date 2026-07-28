@@ -10,6 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplication.composable.AfterClickMe
 import com.example.myapplication.composable.ClickMe
+import com.example.myapplication.composable.GreetingText
 import com.example.myapplication.composable.ResponsiveLayout
 import com.example.myapplication.composable.StateRecomposition
 import com.example.myapplication.theme.ui.QuickNotesAppTheme
@@ -23,6 +24,8 @@ fun App() {
             Button(onClick = { showContent = !showContent }) {
                 ClickMe("Testing")
             }
+
+            GreetingText("Greeting", "Jon")
 
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }

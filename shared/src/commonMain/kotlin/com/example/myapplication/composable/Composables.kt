@@ -27,6 +27,21 @@ fun ClickMe(name: String = "Preview") {
 }
 
 @Composable
+fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
+    Column {
+        Text(
+            text = message,
+            fontSize = 20.sp,
+            lineHeight = 25.sp,
+        )
+        Text(
+            text = from,
+            fontSize = 20.sp
+        )
+    }
+}
+
+@Composable
 fun AfterClickMe(name: String, modifier: Modifier = Modifier) {
     Surface(color = MaterialTheme.colorScheme.primary) {
         Text(

@@ -13,11 +13,12 @@ import com.example.myapplication.composable.AfterClickMe
 import com.example.myapplication.composable.ClickMe
 import com.example.myapplication.composable.ResponsiveLayout
 import com.example.myapplication.composable.StateRecomposition
+import com.example.myapplication.theme.ui.QuickNotesAppTheme
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    QuickNotesAppTheme {
         var showContent by remember { mutableStateOf(false) }
         Column() {
             Button(onClick = { showContent = !showContent }) {

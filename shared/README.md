@@ -150,6 +150,50 @@ Note that if you call the same composable from different parts of the screen you
 
 The composable function will automatically be "subscribed" to the state. If the state changes, composables that read these fields will be recomposed to display the updates.
 
+You can define the action to take on click by assigning a lambda expression to it. For example, let's toggle the value of the expanded state, and show a different text depending on the value.
+
+```kotlin
+ElevatedButton(
+    onClick = { expanded.value = !expanded.value },
+) {
+   Text(if (expanded.value) "Show less" else "Show more")
+}
+```
+
+When the button is clicked, expanded is toggled triggering a recomposition of the text inside the button. Each Greeting maintains its own expanded state, because they belong to different UI elements.
+
+```kotlin
+@Composable
+fun Greeting(name: String, modifier: Modifier = Modifier) {
+    val expanded = remember { mutableStateOf(false) }
+    Surface(
+        color = MaterialTheme.colorScheme.primary,
+        modifier = modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        Row(modifier = Modifier.padding(24.dp)) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(text = "Hello ")
+                Text(text = name)
+            }
+            ElevatedButton(
+                onClick = { expanded.value = !expanded.value }
+            ) {
+                Text(if (expanded.value) "Show less" else "Show more")
+            }
+        }
+    }
+}
+```
+
+Link (Important)
+https://developer.android.com/codelabs/jetpack-compose-basics?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#7
+
+In Composable functions, state that is read or modified by multiple functions should live in a common ancestor—this process is called state hoisting. To hoist means to lift or elevate.
+
+Making state hoistable avoids duplicating state and introducing bugs, helps reuse composables, and makes composables substantially easier to test. Contrarily, state that doesn't need to be controlled by a composable's parent should not be hoisted. The source of truth belongs to whoever creates and controls that state.
+
+*** This part is about putting the mutableStateOf() one level up from the compasable it is at ***
+
 
 # Productivity Hack
 Ask AI how to translate html tags to compose multiplatform code

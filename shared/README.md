@@ -113,6 +113,42 @@ Link (Important):
 Link (Important)
 - https://developer.android.com/codelabs/jetpack-compose-basics?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fjetpack-compose-for-android-developers-1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fjetpack-compose-basics#6
 
+To add internal state to a composable, you can use the mutableStateOf function, which makes Compose recompose functions that read that State.
+
+Note: State and MutableState are interfaces that hold some value and trigger UI updates (recompositions) whenever that value changes.
+
+```kotlin
+import androidx.compose.runtime.mutableStateOf
+// ...
+
+// Don't copy over
+@Composable
+fun Greeting() {
+    val expanded = mutableStateOf(false) // Don't do this!
+}
+```
+
+However you can't just assign mutableStateOf to a variable inside a composable. As explained before, recomposition can happen at any time which would call the composable again, resetting the state to a new mutable state with a value of false.
+
+To preserve state across recompositions, remember the mutable state using remember.
+
+```kotlin
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+// ...
+
+@Composable
+fun Greeting(...) {
+    val expanded = remember { mutableStateOf(false) }
+    // ...
+}
+```
+
+remember is used to guard against recomposition, so the state is not reset.
+
+Note that if you call the same composable from different parts of the screen you will create different UI elements, each with its own version of the state. You can think of internal state as a private variable in a class.
+
+The composable function will automatically be "subscribed" to the state. If the state changes, composables that read these fields will be recomposed to display the updates.
 
 
 # Productivity Hack

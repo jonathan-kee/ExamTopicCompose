@@ -62,6 +62,27 @@ is a composable, the last parameter is a function. The type of "content" is @Com
 
 I think why they can contain child is because of the last parameter
 
+Question: What is the below keywords?
+```kotlin
+var progress by mutableStateOf(1)
+        private set
+
+val question get() = questions[progress - 1]
+
+var isNextEnabled by mutableStateOf(false)
+        private set
+```
+by keyword explanation:
+https://www.youtube.com/watch?v=qo-CrVZ8OwQ&t=59s
+
+remember, by, and mutableStateOf explained:
+https://www.youtube.com/watch?v=O-OSo4Z49po
+
+More explanation of By:
+https://stackoverflow.com/questions/38250022/what-does-by-keyword-do-in-kotlin
+
+Question: What is the difference of by and = ?
+
 # Google official tutorial
 Composable introduction (Important):
 - https://developer.android.com/codelabs/basic-android-kotlin-compose-text-composables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables#2

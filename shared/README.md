@@ -6,6 +6,10 @@
 Where the apk is built
 /Users/jonathankee/AndroidStudioProjects/Survey/androidApp/build/outputs/apk/debug
 
+# CI / CD for Kotlin multiplatform
+Automating Kotlin Multiplatform Releases with GitHub Actions:
+- https://www.youtube.com/watch?v=1Mcros96yEA&t=38s
+
 # Resources to learn Kotlin UI
 Download theme free
 - https://material-foundation.github.io/material-theme-builder/
@@ -18,7 +22,7 @@ The App() function is a regular Kotlin function annotated with @Composable. Such
 # Breakdown the syntax to prevent overwhelm
 ## Composable by order of importance
 Video below show graphic explanation of Row & Column
-https://developer.android.com/develop/ui/compose/layouts/basics
+- https://developer.android.com/develop/ui/compose/layouts/basics
 
 Row - Under Layout
 Column - Under Layout

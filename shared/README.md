@@ -22,10 +22,19 @@ https://developer.android.com/develop/ui/compose/layouts/basics
 
 Row - Under Layout
 Column - Under Layout
+[Scaffold](./screenshots/row&column.png)
+
+![Scaffold](./screenshots/row&column.png)
+
 Text
 Surface
 FlowRow
 ElevatedButton
+
+Scaffold:
+[Scaffold](./screenshots/scaffold.png)
+
+![Scaffold](./screenshots/scaffold.png)
 
 # My Notes
 Where the main class is located:

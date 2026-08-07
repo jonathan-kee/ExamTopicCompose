@@ -32,6 +32,37 @@ Box - Under Layout
 
 ![layouts](./screenshots/layouts.png)
 
+You can use modifiers to decorate or augment your composables. Modifiers are essential for customizing your layout. For example, here we chain several modifiers to customize the ArtistCard:
+
+```kotlin
+@Composable
+fun ArtistCardModifiers(
+    artist: Artist,
+    onClick: () -> Unit
+) {
+    val padding = 16.dp
+    Column(
+        Modifier
+            .clickable(onClick = onClick)
+            .padding(padding)
+            .fillMaxWidth()
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) { /*...*/ }
+        Spacer(Modifier.size(padding))
+        Card(
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        ) { /*...*/ }
+    }
+}
+```
+
+Modifiers:
+- clickable makes a composable react to user input and shows a ripple.
+- padding puts space around an element.
+- fillMaxWidth makes the composable fill the maximum width given to it from its parent.
+- size() specifies an element's preferred width and height.
+
+
 [Scaffold](./screenshots/row&column.png)
 
 ![Scaffold](./screenshots/row&column.png)

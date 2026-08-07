@@ -26,6 +26,12 @@ Video below show graphic explanation of Row & Column
 
 Row - Under Layout
 Column - Under Layout
+Box - Under Layout
+
+[layouts](./screenshots/layouts.png)
+
+![layouts](./screenshots/layouts.png)
+
 [Scaffold](./screenshots/row&column.png)
 
 ![Scaffold](./screenshots/row&column.png)
